@@ -1,0 +1,562 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "MyAkkurattLL-Light", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #EFE6DB;
+}
+
+.section1 {
+  color: #F7F1E8;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.section1-image-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 20px 16px 20px;
+}
+
+.section1-image {
+  position: relative;
+  overflow: hidden;
+  background-image: url("/assets/images/WhyOura.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 16px 16px;
+}
+
+.section1-image-linear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, transparent 65.57%, rgba(0, 0, 0, 0.4) 95.52%);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section1-content {
+  position: relative;
+  padding: 96px 0px 64px 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  z-index: 2;
+  max-width: clamp(320px, 60vw, 800px);
+  margin-right: 30%;
+}
+
+.text1 {
+  margin-top: auto;
+  font-size: 24px;
+  margin-bottom: 48px;
+  padding-top: 24px;
+}
+
+.text2 {
+  margin-top: auto;
+}
+
+.brand {
+  font-family: "MyAkkurattLL-Regular", sans-serif;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #F7F1E8;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 80px);
+  line-height: 1.2;
+  margin: 0;
+  font-weight: normal;
+  color: #F7F1E8;
+  letter-spacing: -2px;
+}
+
+.smartring {
+  font-family: "PPEditorialNew-UltraLightItalic", sans-serif;
+  font-style: normal;
+  text-align: right;
+  padding-left: 320px;
+}
+
+.description {
+  font-family: "MyAkkurattLL-Regular", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  margin-bottom: 32px;
+  max-width: 460px;
+  line-height: 1.5;
+  color: #F7F1E8;
+  opacity: 0.9;
+}
+
+.section2 {
+  padding: 128px 0px 64px 0px;
+}
+
+.section2-content {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: auto auto;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 clamp(24px, 5vw, 48px);
+  gap: 8px 0px;
+}
+
+.section2-row1 {
+  grid-column: 5 / 19;
+  grid-row: 1 / 2;
+  padding: 0px 16px 128px;
+  text-align: center;
+  font-size: 80px;
+  color: #4a4741;
+  letter-spacing: -2px;
+}
+
+.section2-row2 {
+  display: contents;
+}
+
+.italicFont {
+  font-family: "PPEditorialNew-UltraLightItalic", sans-serif;
+  font-style: normal;
+}
+
+.section2-row2-col1 {
+  grid-column: 1 / 11;
+  grid-row: 2 / 3;
+  padding: 0px 0px 64px;
+  color: #000000;
+  font-size: 68px;
+  letter-spacing: -2px;
+}
+
+.section2-text-right {
+  text-align: right;
+}
+
+.section2-row2-col2 {
+  grid-column: 15 / 23;
+  grid-row: 2 / 3;
+  padding: 24px 0px 0px;
+  color: #4A4741;
+  font-family: "MyAkkurattLL-Regular", sans-serif;
+  line-height: 24px;
+}
+
+.section2-row3 {
+  grid-column: 1 / 23;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: clamp(24px, 8vw, 24px);
+  padding-bottom: clamp(24px, 8vw, 24px);
+}
+
+.section2-row3 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section2-row3 img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.section2-row3 .top-img {
+  flex: 1;
+  height: auto;
+}
+
+.section2-row3 .bottom-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.section3 {
+  padding: 64px 64px;
+}
+
+.section3-content {
+  display: grid;
+  grid-template-columns:
+    repeat(22, 1fr);
+    gap: 8px 0px;
+}
+
+.section3-row1 {
+  grid-column: 6 / 19;
+  grid-row: 1 / 2;
+  padding: 0px 16px 120px;
+  text-align: center;
+  font-size: 92px;
+  color: #4a4741;
+  letter-spacing: -2px;
+}
+
+.stats-container {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: #f5f1eb;
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e8e4dd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #F7F1E8;
+  z-index: -1;
+  transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.stat-card:hover::before {
+  height: 100%;
+}
+
+.stat-value {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  transition: all 0.4s ease;
+}
+
+.stat-card:hover .stat-value {
+  transform: scale(1.05);
+}
+
+.stat-description {
+  font-family: 'MyAkkurattLL-Light', sans-serif;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  letter-spacing: 0.2px;
+  max-width: 300px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+.section4 {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.background-image.active {
+  opacity: 1;
+}
+
+.background-june {
+  background-image: url("/assets/images/june.jpg");
+}
+
+.background-july {
+  background-image: url("/assets/images/july.jpg");
+}
+
+.background-august {
+  background-image: url("/assets/images/august.jpg");
+}
+
+.section4-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.month-selection {
+  display: flex;
+  background: #00000040;
+  border-radius: 50px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.month-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.month-btn.active {
+  background: #efeae2;
+  color: #4a4741;
+}
+
+.app-container {
+  max-width: 400px;
+  width: 90%;
+}
+
+.app-image {
+  width: 100%;
+  display: none;
+  background-color: #00000080;
+  border-radius: 24px;
+}
+
+.app-image.active {
+  display: block;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+
+  .section1-image-wrapper {
+    padding: 0px;
+  }
+  
+  .section1-image {
+    background-image: url("/assets/images/WhyOura2.jpg");
+    border-radius: 0px;
+  }
+  
+  .section1-content {
+    padding: 60px 24px 48px 24px;
+    align-items: center;
+    text-align: center;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .section1-image-linear {
+    background-image: none;
+  }
+
+  .text1 {
+    margin-top: 4%;
+  }
+
+  .smartring {
+    padding-left: 240px;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .description {
+    max-width: 600px;
+    margin-bottom: 5%;
+  }
+
+  .section2 {
+    padding: 64px 0px 64px 0px;
+  }
+
+  .section2-content {
+    padding: 0px 32px;
+  }
+
+  .section2-row1 {
+    font-size: 60px;
+    padding: 0px 0px 64px;
+    grid-column: 3 / -3;
+  }
+
+  .section2-row2-col1 {
+    font-size: 48px;
+    grid-column: 1 / 13;
+  }
+
+  .section2-text-right {
+    text-align: left;
+    padding-left: 150px;
+  }
+  .section2-row2-col2 {
+    padding: 0px 0px 24px;
+    grid-column: 14 / -1;
+  }
+
+  .section3 {
+    padding-top: 32px;
+  }
+
+  .section3-row1 {
+    font-size: 60px;
+    padding-bottom: 64px;
+  }
+
+  .stat-value {
+    font-size: 25px;
+  }
+
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  .section1-image-wrapper {
+    padding: 0px;
+  }
+  
+  .section1-image {
+    background-image: url("/assets/images/WhyOura3.jpg");
+    border-radius: 0px;
+  }
+  
+  .section1-content {
+    padding: 60px 24px 48px 24px;
+    align-items: center;
+    text-align: center;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .text1 {
+    margin-top: 8%;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .smartring {
+    padding-left: 0px;
+  }
+
+  .brand {
+    display: none;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .section2-content {
+    grid-template-columns:
+      clamp(12px, 3vw, 24px)
+      repeat(8, 1fr)
+      clamp(12px, 3vw, 24px);
+    gap: 8px 0px;
+    padding: 24px;
+  }
+
+  .section2-row1 {
+    font-size: 40px;
+    grid-column: 2 / -2;
+    grid-row: 1;
+  }
+
+  .section2-row2-col1 {
+    grid-column: 2 / -2;
+    padding: 64px 0px 0px;
+    font-size: 36px;
+    grid-row: 2;
+  }
+
+  .section2-row2-col2 {
+    grid-column: 2 / -2;
+    padding: 24px 0px 48px;
+    grid-row: 3;
+  }
+  
+  .section2-row3 {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    grid-row: 4;
+    padding: 0px;
+  }
+
+  .section2-row3 img {
+    /* aspect-ratio: 1; */
+    object-fit: cover;
+  }
+
+  .section3 {
+    padding: 32px 0px;
+  }
+  
+  .section3-row1 {
+    grid-column: 1 / -1;
+    margin-bottom: 50px;
+    font-size: 40px;
+    padding-bottom: 24px;
+  }
+  
+  .stats-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .stat-card {
+    padding: 35px 25px;
+  }
+
+}

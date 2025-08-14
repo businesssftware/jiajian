@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the Benefits of Oura: Smart Rings for Wellness</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png">
+  <link rel="stylesheet" href="../components//header/header.css">
+  <link rel="stylesheet" href="../shared/fonts.css">
+  <link rel="stylesheet" href="../components/footer/footer.css">
+  <link rel="stylesheet" href="WhyOura.css" />
+  <script src="WhyOura.js"></script>
+</head>
+<body>
+
+  <header id="header" class="site-header"></header>
+  
+  <main>
+    <section class="section1 light-navbar-section">
+      <div class="section1-image-wrapper">
+        <div class="section1-image">
+          <div class="section1-image-linear"></div>
+          <div class="section1-content">
+            
+            <div class="text1">
+              <div class="brand">
+                WHY OURA
+              </div>
+              <h1 class="title">
+                A first-of-its-kind<br><em class="smartring">smart ring</em>
+              </h1>
+            </div>
+
+            <div class="text2">
+              <div class="description">
+                <p>Oura Ring is the first wearable designed to paint a truly holistic picture of your health. Born in Finland, our superior craftsmanship and human-centered philosophy give way to a wellness product loved by millions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2">
+      <div class="section2-content">
+        <div class="section2-row1">
+          88% of Oura Members see their <em class="italicFont">health improve</em>
+        </div>
+        <div class="section2-row2">
+          <div class="section2-row2-col1">
+            Rooted in wellness, 
+            <div class="section2-text-right"><em class="italicFont">not burnout.</em></div>
+          </div>
+          <div class="section2-row2-col2">
+            As Oura evolves, we remain rooted in Nordic wellness principles — that a healthy life is not one of extremes but one of balance. In a time of more stress and more hustle, Oura helps you tune in to what matters to create lifelong, sustainable wellbeing.
+          </div>
+        </div>
+        <div class="section2-row3 light-navbar-section">
+          <div>
+            <img class="top-img"    src="/assets/images/relaxed.jpeg" alt="Relax!!!">
+            <img class="bottom-img" src="/assets/images/relaxed-app-ui-en.jpg" alt="Relax!!!">
+          </div>
+          <div>
+            <img class="top-img"    src="/assets/images/restored.jpeg" alt="Restored">
+            <img class="bottom-img" src="/assets/images/restored-app-ui-en.jpg" alt="Restored">
+          </div>
+          <div>
+            <img class="top-img"    src="/assets/images/engaged.png" alt="Engaged">
+            <img class="bottom-img" src="/assets/images/engaged-app-ui-en.jpg" alt="Engaged">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section3">
+        <div class="section3-content">
+          <div class="section3-row1">
+            <em class="italicFont">10+ years </em>of experience and research
+          </div>
+          <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-value">20+ PhDs</div>
+            <p class="stat-description">
+              Working across an in-house interdisciplinary science team.
+            </p>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-value">4 Generations</div>
+            <p class="stat-description">
+              With each one smarter, lighter, and more durable than the last.
+            </p>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-value">1M+ Members</div>
+              <p class="stat-description">
+                Trust Oura to translate their body's messages into valuable, actionable insights.
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section4">
+      <div class="background-image background-june active light-navbar-section" id="bg-june"></div>
+      <div class="background-image background-july"                             id="bg-july"></div>
+      <div class="background-image background-august"                           id="bg-august"></div>
+
+      <div class="section4-content">
+        <div class="month-selection">
+          <button class="month-btn active"  data-month="june">June</button>
+          <button class="month-btn"         data-month="july">July</button>
+          <button class="month-btn"         data-month="august">August</button>
+        </div>
+        <div class="app-container">
+          <img src="/assets/images/june-app-ui-en11.png"  class="app-image active"  id="img-june" />
+          <img src="/assets/images/july-app-ui-en.png"    class="app-image"         id="img-july" />
+          <img src="/assets/images/august-app-ui-en.png"  class="app-image"         id="img-august" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  
+  <!-- Header -->
+  <script>
+    fetch('../components/header/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '../components//header/header.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <!-- Footer -->
+  <script>
+    fetch('../components/footer/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '../components//footer/footer.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>

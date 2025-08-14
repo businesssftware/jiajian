@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Oura Ring 4</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png" />
+  <link rel="stylesheet" href="../shared/fonts.css" />
+  <link rel="stylesheet" href="OuraRing4.css" />
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <!-- Left side - Background image with header and image viewer -->
+      <div class="image-section">
+        <div class="header">
+          <a href="/ShopPage/ShopPage.html" class="logo">ŌURA</a>
+          <div class="cart" onclick="openCart()">
+            Cart (<span id="cart-count">0</span>)
+          </div>
+        </div>
+
+        <div class="image-viewer">
+          <div class="image-thumb active" data-image="1">
+            <img src="/assets/images/Silver-v2.png" alt="View 1" />
+          </div>
+          <div class="image-thumb" data-image="2">
+            <img src="/assets/images/Black-v2.png" alt="View 2" />
+          </div>
+          <div class="image-thumb" data-image="3">
+            <img src="/assets/images/Brushed-v2.png" alt="View 3" />
+          </div>
+          <div class="image-thumb" data-image="4">
+            <img src="/assets/images/Stealth-v2.png" alt="View 4" />
+          </div>
+          <div class="image-thumb" data-image="5">
+            <img src="/assets/images/Gold-v2.png" alt="View 5" />
+          </div>
+          <div class="image-thumb" data-image="6">
+            <img src="/assets/images/Rose-v2.png" alt="View 6" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side - Selection panel -->
+      <div class="selection-panel">
+        <div class="steps">
+          <div class="step active clickable" id="finish-step" onclick="showFinishStep()">
+            1. Finish
+          </div>
+          <div class="step" id="size-step">
+            2. Size
+          </div>
+        </div>
+
+        <!-- Finish selection content -->
+        <div class="content" id="finish-content">
+          <h2 class="content-title">Select the finish of your Oura Ring :</h2>
+
+          <div class="color-options">
+            <div class="color-option selected" data-color="silver" data-price="349">
+              <div class="color-image-wrapper">
+                <img src="/assets/images/or4-silver-selector.avif" alt="Silver" class="color-image"/>
+              </div>
+              <div class="color-info">
+                <span class="color-name">Silver</span>
+                <span class="color-price">$349</span>
+              </div>
+            </div>
+
+            <div class="color-option" data-color="black" data-price="349">
+              <div class="color-image-wrapper">
+                <img src="/assets/images/or4-black-selector.avif" alt="Black" class="color-image"/>
+              </div>
+              <div class="color-info">
+                <span class="color-name">Black</span>
+                <span class="color-price">$349</span>
+              </div>
+            </div>
+
+            <div class="color-option" data-color="brushed-silver" data-price="399">
+              <div class="color-image-wrapper">
+                <img src="/assets/images/or4-titanium-selector.avif" alt="Brushed Silver" class="color-image"/>
+              </div>
+              <div class="color-info">
+                <span class="color-name">Brushed Silver</span>
+                <span class="color-price">$399</span>
+              </div>
+            </div>
+
+            <div class="color-option" data-color="stealth" data-price="399">
+              <div class="color-image-wrapper">
+                <img src="/assets/images/or4-stealth-selector.avif" alt="Stealth" class="color-image"/>
+              </div>
+              <div class="color-info">
+                <span class="color-name">Stealth</span>
+                <span class="color-price">$399</span>
+              </div>
+            </div>
+
+            <div class="color-option" data-color="gold" data-price="499">
+              <div class="color-image-wrapper">
+                <img src="/assets/images/or4-gold-selector.avif" alt="Gold" class="color-image"/>
+              </div>
+              <div class="color-info">
+                <span class="color-name">Gold</span>
+                <span class="color-price">$499</span>
+              </div>
+            </div>
+
+            <div class="color-option" data-color="rose-gold" data-price="499">
+              <div class="color-image-wrapper">
+                <img src="/assets/images/or4-rose-selector.avif" alt="Rose Gold" class="color-image"/>
+              </div>
+              <div class="color-info">
+                <span class="color-name">Rose Gold</span>
+                <span class="color-price">$499</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Size selection content -->
+        <div class="content size-content" id="size-content">
+          <h2 class="content-title">Select your Oura Ring size :</h2>
+          <div class="size-kit-title">Free Sizing Kit</div>
+          <div class="size-kit-description">
+            Oura Ring 4 sizing is unique from other rings, including Oura
+            Ring Gen3. Order a free sizing kit to ensure an accurate fit.
+          </div>
+          <a href="#" class="size-guide-link">Size Guide</a>
+
+          <div class="size-kit-info">
+            <div class="size-kit-option">
+              <img src="/assets/images/or_4_size_kit.avif" alt="Sizing Kit"/>
+              <input type="checkbox" id="know-size" onchange="toggleSizeOptions()" required/>
+              <label for="know-size">Oura Ring 4 Sizing</label>input
+            </div>
+          </div>
+
+          <div class="size-options" id="size-options" style="display: none">
+            <div class="size-option" data-size="4">4</div>
+            <div class="size-option" data-size="5">5</div>
+            <div class="size-option" data-size="6">6</div>
+            <div class="size-option" data-size="7">7</div>
+            <div class="size-option" data-size="8">8</div>
+            <div class="size-option" data-size="9">9</div>
+            <div class="size-option" data-size="10">10</div>
+            <div class="size-option" data-size="11">11</div>
+            <div class="size-option" data-size="12">12</div>
+            <div class="size-option" data-size="13">13</div>
+            <div class="size-option" data-size="14">14</div>
+            <div class="size-option" data-size="15">15</div>
+          </div>
+
+          <p style="font-size: 14px; color: #4a4741; margin-top: 16px">
+            Oura Ring 4 sizing is different than US Standard sizing as well as
+            previous Oura Ring models. If you have sized with an Oura Ring 4
+            sizing kit, please make your selection below.
+          </p>
+        </div>
+
+
+        <div class="bottom-section">
+          <div class="price" id="current-price">$349 USD</div>
+          <button class="action-button" id="action-button" onclick="handleAction()">
+            Choose Your Size
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="OuraRing4.js"></script>
+
+</body>
+</html>
