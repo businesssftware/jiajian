@@ -228,3 +228,48 @@ document.addEventListener("keydown", (e) => {
         }, 3000);
     }
 });
+
+// setting cookies start
+function setCookie(name, value, days) {
+  let date = new Date();
+  date.setTime(date.getTime() + (days*24*60*60*1000));
+  let expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/";
+}
+
+//get cookie
+function getCookie(name) {
+  let cname = name + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for (let c of ca) {
+    c = c.trim();
+    if (c.indexOf(cname) === 0) {
+      return c.substring(cname.length);
+    }
+  }
+  return "";
+}
+
+// del cookies
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+// load page into webside
+window.onload = function() {
+  let username = getCookie("username");
+  console.log("current cookie value:", username); 
+
+  if (!username) {
+    username = prompt("Enter the name:");
+    if (username) {
+      setCookie("username", username, 7);
+      alert("hi, " + username + "!");
+    } else {
+      alert("not enter input, cookies would not stored");
+    }
+  } else {
+    alert("welcomeback ;, " + username + "!");
+  }
+}

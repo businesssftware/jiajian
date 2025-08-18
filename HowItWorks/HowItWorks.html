@@ -55,7 +55,7 @@
           </ul>
         </div>
         <div class="section-visual">
-          <img src="\assets\img\heart_rate_variability_en.png" alt="Heart Rate Variability"  />
+          <img src="\assets\img\heart_rate_variability_en.png" alt="line chart Variability"  />
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
       <div class="section-container">
         <div class="section-visual">
           <div class="visual-element">
-            <img src="\assets\img\bedtime_guidance_en.png" alt="Heart Rate Variability"  />                
+            <img src="\assets\img\bedtime_guidance_en.png" alt="piechart Variability"  />                
             </div>
           </div>
         </div>
@@ -107,22 +107,10 @@
         </div>
         <div class="section-visual">
           <div class="visual-element">
-            <img style=" object-fit: cover;" src="\assets\img\daytime_stress_en_1.png" alt="Heart Rate Variability"  />
+            <img  src="\assets\img\daytime_stress_en_1.png" alt="graph1 Variability"  />
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Transition Section -->
     <section class="transition-section">
@@ -134,18 +122,6 @@
         </p>
       </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -195,7 +171,7 @@
             </div>
             <div class="section-visual">
               <div class="visual-element">
-               <img src="\assets\img\resilience_en.png" alt="Heart Rate Variability"  />
+               <img src="\assets\img\resilience_en.png" alt="sleep Variability"  />
               </div>
             </div>
           </div>
@@ -204,7 +180,7 @@
         <!-- Morning Section -->
         <section class="content-section section-dark" data-index="2">
           <div class="section-container">
-            <img src="\assets\img\partner_integrations_en.png" alt="Heart Rate Variability"  /> 
+            <img src="\assets\img\partner_integrations_en.png" alt="morning Variability"  /> 
             <div class="section-content">
               <h2 class="section-title">Rise and shine</h2>
               <p class="section-description">
@@ -237,21 +213,20 @@
                 <li>Heart rate monitoring</li>
                 <li>Stress level detection</li>
                 <li>Performance optimization</li>
-              </ul>
+              </ul> 
             </div>
             <div class="section-visual">
               <div class="visual-element">
-                <img src="\assets\img\lifestyle_photo_grid_2_4.jpg" alt="Heart Rate Variability"  />
+                <img src="\assets\img\lifestyle_photo_grid_2_4.jpg" alt="afternoon Variability"  />
               </div>
             </div>
           </div>
         </section>
-
         <!-- Evening Section -->
         <section class="content-section section-purple" data-index="4">
           <div class="section-container">
             <div class="section-visual">
-              <img src="\assets\img\BKG_blur_VSH5YX.png" alt="Heart Rate Variability"  />
+              <img src="\assets\img\BKG_blur_VSH5YX.png" alt="evening  Variability"  />
               </div>
             </div>
             <div class="section-content">
@@ -270,28 +245,6 @@
           </div>
         </section>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <!-- Progress Indicator -->
       <div class="progress-indicator">
@@ -324,56 +277,6 @@
     <script src="howitworks.js">
       
     </script>
-    <script>
-// setting cookies start
-function setCookie(name, value, days) {
-  let date = new Date();
-  date.setTime(date.getTime() + (days*24*60*60*1000));
-  let expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/";
-}
-
-//get cookie
-function getCookie(name) {
-  let cname = name + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for (let c of ca) {
-    c = c.trim();
-    if (c.indexOf(cname) === 0) {
-      return c.substring(cname.length);
-    }
-  }
-  return "";
-}
-
-// del cookies
-function deleteCookie(name) {
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
-
-// load page into webside
-window.onload = function() {
-  let username = getCookie("username");
-  console.log("current cookie value:", username); 
-
-  if (!username) {
-    username = prompt("Enter the name:");
-    if (username) {
-      setCookie("username", username, 7);
-      alert("hi, " + username + "!");
-    } else {
-      alert("not enter input, cookies would not stored");
-    }
-  } else {
-    alert("welcomeback ;, " + username + "!");
-  }
-}
-</script>
-
-
-
-
 
     <script>
        fetch('../components/header/header.html')

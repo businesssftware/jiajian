@@ -52,7 +52,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(88, 83, 83, 0.5);
-    z-index : 0; 
+    z-index: 0;
 }
 
 .hero-section video {
@@ -62,7 +62,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index:1 ;
+    z-index: 1;
 }
 
 .hero-subtitle {
@@ -81,30 +81,6 @@ body {
     line-height: 1.6;
 }
 
-.floating-ring {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border: 4px solid #6366f1;
-    border-radius: 50%;
-    top: 20%;
-    right: 10%;
-    opacity: 0.6;
-    animation: float 6s ease-in-out infinite;
-}
-
-.floating-ring::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px solid #8b5cf6;
-    border-radius: 50%;
-    opacity: 0.4;
-    animation: pulse 4s ease-in-out infinite;
-}
 
 .scroll-indicator {
     position: absolute;
@@ -139,7 +115,7 @@ body {
 }
 
 .section-blue {
-        background-color: rgb(145, 120, 81);
+    background-color: rgb(145, 120, 81);
 }
 
 .section-green {
@@ -210,79 +186,6 @@ body {
     padding-left: 20px;
 }
 
-.visual-element {
-    position: relative;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    --webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.ring-visualization {
-    width: 200px;
-    height: 200px;
-    border: 8px solid #fff;
-    border-radius: 50%;
-    position: relative;
-    animation: rotate 10s linear infinite;
-}
-
-.ring-visualization::before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 4px solid rgba(99, 102, 241, 0.5);
-    border-radius: 50%;
-    animation: pulse 3s ease-in-out infinite;
-}
-
-.data-points {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.data-point {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: #2c2c46;
-    border-radius: 50%;
-    animation: dataPoint 4s ease-in-out infinite;
-}
-
-.data-point:nth-child(1) {
-    top: 10%;
-    left: 50%;
-    animation-delay: 0s;
-}
-
-.data-point:nth-child(2) {
-    top: 50%;
-    right: 10%;
-    animation-delay: 0.5s;
-}
-
-.data-point:nth-child(3) {
-    bottom: 10%;
-    left: 50%;
-    animation-delay: 1s;
-}
-
-.data-point:nth-child(4) {
-    top: 50%;
-    left: 10%;
-    animation-delay: 1.5s;
-}
-
 /* Transition Section */
 .transition-section {
     height: 100vh;
@@ -297,8 +200,6 @@ body {
     text-align: center;
     position: relative;
 }
-/*cant change the picutre,, some cover it */
-
 
 .transition-content {
     max-width: 800px;
@@ -404,30 +305,11 @@ body {
     transition-delay: 1.1s;
 }
 
-.content-section .ring-visualization {
-    animation: none;
-}
+.section-visual visual-element img {}
 
-.content-section.active .ring-visualization {
-    animation: rotate 10s linear infinite;
-}
-
-.content-section .ring-visualization::before {
-    animation: none;
-}
-
-.content-section.active .ring-visualization::before {
-    animation: pulse 3s ease-in-out infinite;
-}
-
-.content-section .data-point {
-    opacity: 0;
-    animation: none;
-}
-
-.content-section.active .data-point {
-    animation: dataPoint 4s ease-in-out infinite;
-}
+name photo,
+this section erroe,
+respoonsive test: done
 
 /* Progress Indicator */
 .progress-indicator {
@@ -443,7 +325,7 @@ body {
     animation: fadeInUp 2.0s ease-out 0.5s forwards;
 }
 
-/*   */
+
 .progress-dot {
     width: 12px;
     height: 12px;

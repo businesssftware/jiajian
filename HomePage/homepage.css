@@ -9,11 +9,12 @@
           background: linear-gradient(135deg, #e8ddd4 0%, #d4c4b0 100%);
           overflow-x: hidden;
       }
+
       html {
           scroll-behavior: smooth;
-        background-color: rgb(247, 241, 232);
+          background-color: rgb(247, 241, 232);
 
-      } 
+      }
 
       /* Navigation */
       .navbar {
@@ -108,13 +109,11 @@
 
 
 
-      .hero {
-          background-image: url("/assets/img/home3.png");
-          background-size: cover;
-          background-repeat: no-repeat;
-        
-      }
 
+
+
+
+      /* Hero Section */
       .overlay {
           position: absolute;
           top: 0;
@@ -124,40 +123,6 @@
           background-color: rgba(88, 83, 83, 0.5);
       }
 
-      /*
-      .ring-inner {
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #e0e0e0 0%, #b0b0b0 100%);
-          box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
-          position: relative;
-          overflow: hidden;
-      }
-
-      .ring {
-          
-          width: 400px;
-          height: 400px;
-          position: relative;
-          animation: float 6s ease-in-out infinite;
-          cursor: pointer;
-          transition: transform 0.3s ease;
-      }
-      .ring-container {
-          flex: 1;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-          height: 100vh;
-      }
-
-          ring prototype , if we added the ring self made !*/
-
-
-          
-      /* Hero Section */
       .hero {
           min-height: 100vh;
           display: flex;
@@ -165,6 +130,9 @@
           padding: 0 40px;
           position: relative;
           overflow: hidden;
+          background-image: url("/assets/img/home3.png");
+          background-size: cover;
+          background-repeat: no-repeat;
       }
 
       .hero-content {
