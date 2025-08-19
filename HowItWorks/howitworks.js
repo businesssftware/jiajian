@@ -117,16 +117,7 @@ if (scrollIndicator) {
     });
 }
 
-// Parallax effect for floating ring
-window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
-    const parallax = document.querySelector(".floating-ring");
-    if (parallax) {
-        const speed = scrolled * 0.5;
-        parallax.style.transform = `translateY(${speed}px) rotate(${scrolled * 0.1
-            }deg)`;
-    }
-});
+
 
 // Pause auto-play when user interacts with showcase
 const mainContent = document.querySelector(".main-content");
@@ -229,47 +220,73 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-// setting cookies start
-function setCookie(name, value, days) {
-  let date = new Date();
-  date.setTime(date.getTime() + (days*24*60*60*1000));
-  let expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/";
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const cookiePopup = document.getElementById('cookiePopup');
+    const overlay = document.getElementById('overlay');
+    const acceptAllBtn = document.getElementById('acceptAllBtn');
+    const necessaryBtn = document.getElementById('necessaryBtn');
 
-//get cookie
-function getCookie(name) {
-  let cname = name + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for (let c of ca) {
-    c = c.trim();
-    if (c.indexOf(cname) === 0) {
-      return c.substring(cname.length);
+    // Check if cookie consent was already given
+    if (!getCookie('cookie_consent')) {
+        // Show popup and overlay after short delay
+        setTimeout(() => {
+            cookiePopup.classList.add('show');
+            overlay.classList.add('show');
+        }, 1000);
     }
-  }
-  return "";
-}
 
-// del cookies
-function deleteCookie(name) {
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
+    // Accept all cookies
+    acceptAllBtn.addEventListener('click', function () {
+        setCookieSeconds('cookie_consent', 'all', 5); // 5min expiry
+        setCookie('analytics_cookies', 'true', 365);
+        setCookie('marketing_cookies', 'true', 365);
+        closePopup();
+    });
 
-// load page into webside
-window.onload = function() {
-  let username = getCookie("username");
-  console.log("current cookie value:", username); 
+    // Accept only necessary cookies
+    necessaryBtn.addEventListener('click', function () {
+        setCookie('cookie_consent', 'necessary', 365);
+        setCookie('analytics_cookies', 'false', 365);
+        setCookie('marketing_cookies', 'false', 365);
+        closePopup();
+    });
 
-  if (!username) {
-    username = prompt("Enter the name:");
-    if (username) {
-      setCookie("username", username, 7);
-      alert("hi, " + username + "!");
-    } else {
-      alert("not enter input, cookies would not stored");
+    function closePopup() {
+        cookiePopup.classList.remove('show');
+        overlay.classList.remove('show');
     }
-  } else {
-    alert("welcomeback ;, " + username + "!");
-  }
-}
+
+    // Cookie helper functions
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/; SameSite=Lax`;
+    }
+
+    function getCookie(name) {
+        const cookieName = name + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookieArray = decodedCookie.split(';');
+
+        for (let i = 0; i < cookieArray.length; i++) {
+            let cookie = cookieArray[i];
+            while (cookie.charAt(0) === ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(cookieName) === 0) {
+                return cookie.substring(cookieName.length, cookie.length);
+            }
+        }
+        return "";
+    }
+
+
+    function setCookieSeconds(name, value, minutes) {
+        const date = new Date();
+        date.setTime(date.getTime() + (minutes * 1000 *60));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/; SameSite=Lax`;
+    }
+});
+
