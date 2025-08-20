@@ -751,49 +751,7 @@ html {
 
 @media (max-width: 768px) {
 
-    /* Navigation */
-    .navbar {
-        padding: 15px 20px;
-    }
 
-    .logo {
-        font-size: 1.5rem;
-        /* 24px */
-    }
-
-    .nav-links {
-        display: none;
-        /* Hide nav links by default */
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: var(--background-light, rgba(255, 255, 255, 0.95));
-        padding: 20px;
-        gap: 20px;
-        box-shadow: var(--shadow-sm, 0 4px 15px rgba(0, 0, 0, 0.1));
-    }
-
-    .nav-links.active {
-        display: flex;
-        /* Show when menu-toggle is clicked */
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-        color: var(--text-dark, #333);
-    }
-
-    .shop-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .menu-toggle {
-        display: block;
-        /* Show hamburger menu */
-    }
 
     /* Hero Section */
     .hero {
