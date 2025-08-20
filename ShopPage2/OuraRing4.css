@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'MyAkkurattLL-Regular';
+  font-family: "MyAkkurattLL-Regular";
   overflow-x: hidden;
 }
 
@@ -16,17 +16,15 @@ body {
   position: relative;
 }
 
-/* Left side - Background image */
 .image-section {
   flex: 1;
-  background-image: url("/assets/images/Silver.png");
+  background-image: url("../assets/images/Silver.png");
   background-size: cover;
   background-position: center;
   position: relative;
   min-height: 100vh;
 }
 
-/* Header - Logo and Cart */
 .header {
   position: absolute;
   top: 0;
@@ -42,7 +40,7 @@ body {
 .logo {
   color: #fefaef;
   transform: scaleY(0.8);
-  font-family: 'MyAkkurattLL-Light';
+  font-family: "MyAkkurattLL-Light";
   font-size: 40px;
   font-weight: 100;
   cursor: pointer;
@@ -103,7 +101,6 @@ body {
   object-fit: cover;
 }
 
-/* Right side - Selection panel */
 .selection-panel {
   width: 496px;
   background-color: #fefaef;
@@ -112,7 +109,6 @@ body {
   position: relative;
 }
 
-/* Steps indicator */
 .steps {
   display: flex;
   padding: 40px 32px 0;
@@ -148,7 +144,6 @@ body {
   color: #000;
 }
 
-/* Content area */
 .content {
   margin-top: 1.5rem;
   padding: 16px;
@@ -164,7 +159,6 @@ body {
   font-family: "MyAkkurattLL-Light", sans-serif;
 }
 
-/* Color selection */
 .color-options {
   display: flex;
   flex-direction: column;
@@ -222,7 +216,6 @@ body {
   font-weight: 500;
 }
 
-/* Size selection */
 .size-content {
   display: none;
 }
@@ -300,7 +293,6 @@ body {
   background: #ffffff;
 }
 
-/* Bottom section */
 .bottom-section {
   padding: 16px;
   display: flex;
@@ -330,7 +322,7 @@ body {
   background: #2970e6;
 }
 
-/* Mobile styles */
+/* Tablet Responsive */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -343,18 +335,21 @@ body {
     position: relative;
     z-index: 5;
   }
-  
+
   .header {
     padding: 8px 16px;
     background: #fefaef;
   }
-  
-  .logo, .cart, .cart-count {
+
+  .logo,
+  .cart,
+  .cart-count {
     color: #4a4741;
     font-size: 32px;
   }
 
-  .cart, .cart-count {
+  .cart,
+  .cart-count {
     font-size: 24px;
   }
 
@@ -370,22 +365,22 @@ body {
   .image-viewer {
     bottom: 120px;
   }
-  
+
   .size-options {
     grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     gap: 8px;
     justify-content: flex-start;
   }
-
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
-
   .logo {
     font-size: 24px;
   }
 
-  .cart, .cart-count {
+  .cart,
+  .cart-count {
     font-size: 16px;
   }
 

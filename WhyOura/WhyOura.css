@@ -6,11 +6,11 @@ body {
   font-family: "MyAkkurattLL-Light", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #EFE6DB;
+  background-color: #efe6db;
 }
 
 .section1 {
-  color: #F7F1E8;
+  color: #f7f1e8;
   height: 100vh;
   overflow: hidden;
 }
@@ -25,7 +25,7 @@ body {
 .section1-image {
   position: relative;
   overflow: hidden;
-  background-image: url("/assets/images/WhyOura.jpg");
+  background-image: url("../assets/images/WhyOura.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +44,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, transparent 65.57%, rgba(0, 0, 0, 0.4) 95.52%);
+  background-image: linear-gradient(
+    to top,
+    transparent 65.57%,
+    rgba(0, 0, 0, 0.4) 95.52%
+  );
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   pointer-events: none;
@@ -79,7 +83,7 @@ body {
   font-family: "MyAkkurattLL-Regular", sans-serif;
   font-size: 16px;
   margin-bottom: 16px;
-  color: #F7F1E8;
+  color: #f7f1e8;
   letter-spacing: 0px;
   font-weight: 700;
 }
@@ -89,7 +93,7 @@ body {
   line-height: 1.2;
   margin: 0;
   font-weight: normal;
-  color: #F7F1E8;
+  color: #f7f1e8;
   letter-spacing: -2px;
 }
 
@@ -106,7 +110,7 @@ body {
   margin-bottom: 32px;
   max-width: 460px;
   line-height: 1.5;
-  color: #F7F1E8;
+  color: #f7f1e8;
   opacity: 0.9;
 }
 
@@ -160,7 +164,7 @@ body {
   grid-column: 15 / 23;
   grid-row: 2 / 3;
   padding: 24px 0px 0px;
-  color: #4A4741;
+  color: #4a4741;
   font-family: "MyAkkurattLL-Regular", sans-serif;
   line-height: 24px;
 }
@@ -206,9 +210,8 @@ body {
 
 .section3-content {
   display: grid;
-  grid-template-columns:
-    repeat(22, 1fr);
-    gap: 8px 0px;
+  grid-template-columns: repeat(22, 1fr);
+  gap: 8px 0px;
 }
 
 .section3-row1 {
@@ -250,7 +253,7 @@ body {
   left: 0;
   width: 100%;
   height: 0;
-  background: #F7F1E8;
+  background: #f7f1e8;
   z-index: -1;
   transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -278,7 +281,7 @@ body {
 }
 
 .stat-description {
-  font-family: 'MyAkkurattLL-Light', sans-serif;
+  font-family: "MyAkkurattLL-Light", sans-serif;
   font-size: clamp(0.9rem, 1.1vw, 1.1rem);
   letter-spacing: 0.2px;
   max-width: 300px;
@@ -310,15 +313,15 @@ body {
 }
 
 .background-june {
-  background-image: url("/assets/images/june.jpg");
+  background-image: url("../assets/images/june.jpg");
 }
 
 .background-july {
-  background-image: url("/assets/images/july.jpg");
+  background-image: url("../assets/images/july.jpg");
 }
 
 .background-august {
-  background-image: url("/assets/images/august.jpg");
+  background-image: url("../assets/images/august.jpg");
 }
 
 .section4-content {
@@ -372,16 +375,15 @@ body {
 
 /* Tablet Responsive */
 @media (max-width: 1024px) {
-
   .section1-image-wrapper {
     padding: 0px;
   }
-  
+
   .section1-image {
-    background-image: url("/assets/images/WhyOura2.jpg");
+    background-image: url("../assets/images/WhyOura2.jpg");
     border-radius: 0px;
   }
-  
+
   .section1-content {
     padding: 60px 24px 48px 24px;
     align-items: center;
@@ -451,21 +453,19 @@ body {
   .stat-value {
     font-size: 25px;
   }
-
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-
   .section1-image-wrapper {
     padding: 0px;
   }
-  
+
   .section1-image {
-    background-image: url("/assets/images/WhyOura3.jpg");
+    background-image: url("../assets/images/WhyOura3.jpg");
     border-radius: 0px;
   }
-  
+
   .section1-content {
     padding: 60px 24px 48px 24px;
     align-items: center;
@@ -482,7 +482,7 @@ body {
     font-size: 36px;
     text-align: center;
   }
-  
+
   .smartring {
     padding-left: 0px;
   }
@@ -490,7 +490,7 @@ body {
   .brand {
     display: none;
   }
-  
+
   .description {
     text-align: center;
     font-size: 16px;
@@ -523,7 +523,7 @@ body {
     padding: 24px 0px 48px;
     grid-row: 3;
   }
-  
+
   .section2-row3 {
     grid-column: 1 / -1;
     grid-template-columns: repeat(1, 1fr);
@@ -540,23 +540,22 @@ body {
   .section3 {
     padding: 32px 0px;
   }
-  
+
   .section3-row1 {
     grid-column: 1 / -1;
     margin-bottom: 50px;
     font-size: 40px;
     padding-bottom: 24px;
   }
-  
+
   .stats-container {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
     gap: 20px;
   }
-  
+
   .stat-card {
     padding: 35px 25px;
   }
-
 }

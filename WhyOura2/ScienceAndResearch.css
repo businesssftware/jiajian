@@ -25,7 +25,7 @@ body {
 .section1-image {
   position: relative;
   overflow: hidden;
-  background-image: url("/assets/images/ScienceResearch.jpg");
+  background-image: url("../assets/images/ScienceResearch.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,7 +62,6 @@ body {
       transparent 60%
     ),
     radial-gradient(circle at 25% 75%, rgb(15, 10, 0, 0.2) 0%, transparent 50%);
-  /* background-color: rgba(0, 0, 0, 0.2); */
   z-index: 1;
   pointer-events: none;
 }
@@ -306,7 +305,7 @@ body {
 }
 
 .section4-image {
-  background: url("/assets/images/science-callout-or4-desktop.jpg") center/cover
+  background: url("../assets/images/science-callout-or4-desktop.jpg") center/cover
     no-repeat;
 }
 
@@ -423,7 +422,7 @@ body {
   }
 
   .section1-image {
-    background-image: url("/assets/images/ScienceResearch2.jpg");
+    background-image: url("../assets/images/ScienceResearch2.jpg");
     border-radius: 0px;
   }
 
@@ -529,7 +528,6 @@ body {
   .additional-studies {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 /* Mobile Responsive */
@@ -622,7 +620,7 @@ body {
     padding: 0px 40px 80px;
     margin: 0 auto;
   }
-  
+
   .study-card {
     height: 600px;
   }

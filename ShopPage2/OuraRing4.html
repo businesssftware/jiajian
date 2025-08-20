@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop Oura Ring 4</title>
-  <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/icon-32x32.png" />
   <link rel="stylesheet" href="../shared/fonts.css" />
   <link rel="stylesheet" href="OuraRing4.css" />
 </head>
@@ -12,10 +12,10 @@
 
   <main>
     <div class="container">
-      <!-- Left side - Background image with header and image viewer -->
+      
       <div class="image-section">
         <div class="header">
-          <a href="/ShopPage/ShopPage.html" class="logo">ŌURA</a>
+          <a href="../ShopPage/ShopPage.html" class="logo">ŌURA</a>
           <div class="cart" onclick="openCart()">
             Cart (<span id="cart-count">0</span>)
           </div>
@@ -23,27 +23,26 @@
 
         <div class="image-viewer">
           <div class="image-thumb active" data-image="1">
-            <img src="/assets/images/Silver-v2.png" alt="View 1" />
+            <img src="../assets/images/Silver-v2.png"   alt="View 1" />
           </div>
           <div class="image-thumb" data-image="2">
-            <img src="/assets/images/Black-v2.png" alt="View 2" />
+            <img src="../assets/images/Black-v2.png"    alt="View 2" />
           </div>
           <div class="image-thumb" data-image="3">
-            <img src="/assets/images/Brushed-v2.png" alt="View 3" />
+            <img src="../assets/images/Brushed-v2.png"  alt="View 3" />
           </div>
           <div class="image-thumb" data-image="4">
-            <img src="/assets/images/Stealth-v2.png" alt="View 4" />
+            <img src="../assets/images/Stealth-v2.png"  alt="View 4" />
           </div>
           <div class="image-thumb" data-image="5">
-            <img src="/assets/images/Gold-v2.png" alt="View 5" />
+            <img src="../assets/images/Gold-v2.png"     alt="View 5" />
           </div>
           <div class="image-thumb" data-image="6">
-            <img src="/assets/images/Rose-v2.png" alt="View 6" />
+            <img src="../assets/images/Rose-v2.png"     alt="View 6" />
           </div>
         </div>
       </div>
 
-      <!-- Right side - Selection panel -->
       <div class="selection-panel">
         <div class="steps">
           <div class="step active clickable" id="finish-step" onclick="showFinishStep()">
@@ -54,14 +53,13 @@
           </div>
         </div>
 
-        <!-- Finish selection content -->
         <div class="content" id="finish-content">
           <h2 class="content-title">Select the finish of your Oura Ring :</h2>
 
           <div class="color-options">
             <div class="color-option selected" data-color="silver" data-price="349">
               <div class="color-image-wrapper">
-                <img src="/assets/images/or4-silver-selector.avif" alt="Silver" class="color-image"/>
+                <img src="../assets/images/or4-silver-selector.avif" alt="Silver" class="color-image"/>
               </div>
               <div class="color-info">
                 <span class="color-name">Silver</span>
@@ -71,7 +69,7 @@
 
             <div class="color-option" data-color="black" data-price="349">
               <div class="color-image-wrapper">
-                <img src="/assets/images/or4-black-selector.avif" alt="Black" class="color-image"/>
+                <img src="../assets/images/or4-black-selector.avif" alt="Black" class="color-image"/>
               </div>
               <div class="color-info">
                 <span class="color-name">Black</span>
@@ -81,7 +79,7 @@
 
             <div class="color-option" data-color="brushed-silver" data-price="399">
               <div class="color-image-wrapper">
-                <img src="/assets/images/or4-titanium-selector.avif" alt="Brushed Silver" class="color-image"/>
+                <img src="../assets/images/or4-titanium-selector.avif" alt="Brushed Silver" class="color-image"/>
               </div>
               <div class="color-info">
                 <span class="color-name">Brushed Silver</span>
@@ -91,7 +89,7 @@
 
             <div class="color-option" data-color="stealth" data-price="399">
               <div class="color-image-wrapper">
-                <img src="/assets/images/or4-stealth-selector.avif" alt="Stealth" class="color-image"/>
+                <img src="../assets/images/or4-stealth-selector.avif" alt="Stealth" class="color-image"/>
               </div>
               <div class="color-info">
                 <span class="color-name">Stealth</span>
@@ -101,7 +99,7 @@
 
             <div class="color-option" data-color="gold" data-price="499">
               <div class="color-image-wrapper">
-                <img src="/assets/images/or4-gold-selector.avif" alt="Gold" class="color-image"/>
+                <img src="../assets/images/or4-gold-selector.avif" alt="Gold" class="color-image"/>
               </div>
               <div class="color-info">
                 <span class="color-name">Gold</span>
@@ -111,7 +109,7 @@
 
             <div class="color-option" data-color="rose-gold" data-price="499">
               <div class="color-image-wrapper">
-                <img src="/assets/images/or4-rose-selector.avif" alt="Rose Gold" class="color-image"/>
+                <img src="../assets/images/or4-rose-selector.avif" alt="Rose Gold" class="color-image"/>
               </div>
               <div class="color-info">
                 <span class="color-name">Rose Gold</span>
@@ -121,7 +119,6 @@
           </div>
         </div>
 
-        <!-- Size selection content -->
         <div class="content size-content" id="size-content">
           <h2 class="content-title">Select your Oura Ring size :</h2>
           <div class="size-kit-title">Free Sizing Kit</div>
@@ -133,7 +130,7 @@
 
           <div class="size-kit-info">
             <div class="size-kit-option">
-              <img src="/assets/images/or_4_size_kit.avif" alt="Sizing Kit"/>
+              <img src="../assets/images/or_4_size_kit.avif" alt="Sizing Kit"/>
               <input type="checkbox" id="know-size" onchange="toggleSizeOptions()" required/>
               <label for="know-size">Oura Ring 4 Sizing</label>input
             </div>

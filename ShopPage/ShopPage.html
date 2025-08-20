@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discover Oura's health, fitness, and sleep rings | Oura</title>
-  <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/icon-32x32.png" />
   <link rel="stylesheet" href="../components/header/header.css" />
   <link rel="stylesheet" href="../components/footer/footer.css" />
   <link rel="stylesheet" href="../shared/fonts.css" />
@@ -35,7 +35,7 @@
               <div class="description">
                 <p>A new era of unparalleled accuracy and comfort helps you get up close and personal with your health like never before.</p>
               </div>
-              <a class="choose-button" href="/ShopPage2/OuraRing4.html">Choose Your Oura Ring 4</a>
+              <a class="choose-button" href="../ShopPage2/OuraRing4.html">Choose Your Oura Ring 4</a>
             </div>
           </div>
         </div>
@@ -65,13 +65,13 @@
             Based on your Oura Ring size and your lifestyle, the Oura Ring 4 battery can last <strong>over a week</strong> — so you can go days without even thinking about charging.*</p>
         </div>
         <div class="section3-media">
-          <video src="/assets/images/battery-life.mp4" autoplay muted loop playsinline></video>
+          <video src="../assets/images/battery-life.mp4" autoplay muted loop playsinline></video>
         </div>
       </div>
 
       <div class="section3-content">
         <div class="section3-image">
-          <img src="/assets/images/live-longer.jpg" alt="live-longer.jpg">
+          <img src="../assets/images/live-longer.jpg" alt="live-longer.jpg">
         </div>
         <div class="section3-text">
           <h2 class="section3-text1">
@@ -90,26 +90,26 @@
       <div class="section4-content">
         
         <h2 class="section4-text">A finish for every lifestyle</h2>
-        <a class="cta-button" href="/ShopPage2/OuraRing4.html">Choose your Oura Ring</a>
+        <a class="cta-button" href="../ShopPage2/OuraRing4.html">Choose your Oura Ring</a>
         
         <div class="image-container">
-          <img src="/assets/images/Silver.png"  alt="Silver Ring"         class="ring-image active" data-color="silver">
-          <img src="/assets/images/Black.png"   alt="Black Ring"          class="ring-image"        data-color="black">
-          <img src="/assets/images/Brushed.png" alt="Brushed Silver Ring" class="ring-image"        data-color="brushed-silver">
-          <img src="/assets/images/Stealth.png" alt="Stealth Ring"        class="ring-image"        data-color="stealth">
-          <img src="/assets/images/Gold.png"    alt="Gold Ring"           class="ring-image"        data-color="gold">
-          <img src="/assets/images/Rose.png"    alt="Rose Gold Ring"      class="ring-image"        data-color="rose-gold">
+          <img src="../assets/images/Silver.png"  alt="Silver Ring"         class="ring-image active" data-color="silver">
+          <img src="../assets/images/Black.png"   alt="Black Ring"          class="ring-image"        data-color="black">
+          <img src="../assets/images/Brushed.png" alt="Brushed Silver Ring" class="ring-image"        data-color="brushed-silver">
+          <img src="../assets/images/Stealth.png" alt="Stealth Ring"        class="ring-image"        data-color="stealth">
+          <img src="../assets/images/Gold.png"    alt="Gold Ring"           class="ring-image"        data-color="gold">
+          <img src="../assets/images/Rose.png"    alt="Rose Gold Ring"      class="ring-image"        data-color="rose-gold">
         </div>
 
         <div class="color-selector-container">
           <div class="color-info">Silver</div>
           <div class="color-selector">
-            <img src="/assets/images/swatch-silver_1.png"         alt="Silver"          class="color-dot silver active"  data-color="silver">
-            <img src="/assets/images/swatch-black_1.png"          alt="Black"           class="color-dot black"          data-color="black">
-            <img src="/assets/images/swatch-brushed-silver_1.png" alt="Brushed Silver"  class="color-dot brushed-silver" data-color="brushed-silver">
-            <img src="/assets/images/swatch-stealth_1.png"        alt="Stealth"         class="color-dot stealth"        data-color="stealth">
-            <img src="/assets/images/swatch-gold_1.png"           alt="Gold"            class="color-dot gold"           data-color="gold">
-            <img src="/assets/images/swatch-rose-gold_1.png"      alt="Rose Gold"       class="color-dot rose-gold"      data-color="rose-gold">
+            <img src="../assets/images/swatch-silver_1.png"         alt="Silver"          class="color-dot silver active"  data-color="silver">
+            <img src="../assets/images/swatch-black_1.png"          alt="Black"           class="color-dot black"          data-color="black">
+            <img src="../assets/images/swatch-brushed-silver_1.png" alt="Brushed Silver"  class="color-dot brushed-silver" data-color="brushed-silver">
+            <img src="../assets/images/swatch-stealth_1.png"        alt="Stealth"         class="color-dot stealth"        data-color="stealth">
+            <img src="../assets/images/swatch-gold_1.png"           alt="Gold"            class="color-dot gold"           data-color="gold">
+            <img src="../assets/images/swatch-rose-gold_1.png"      alt="Rose Gold"       class="color-dot rose-gold"      data-color="rose-gold">
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@
           </h2>
         </div>
         <div class="section3-image">
-          <img src="/assets/images/compare-section-feature-v2.jpg" alt="live-longer.jpg">
+          <img src="../assets/images/compare-section-feature-v2.jpg" alt="live-longer.jpg">
         </div>
       </div>
     </section>
@@ -197,6 +197,7 @@
 
   <footer id="footer"></footer>
 
+  <!-- Header -->
   <script>
     fetch("../components/header/header.html")
       .then((res) => res.text())
@@ -215,12 +216,13 @@
       });
   </script>
 
-  <script>//dynamic load footer to all page if this code
+  <!-- Footer -->
+  <script>
     fetch('../components/footer/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
-        // footer插入后再加载 footer.js
+
         const script = document.createElement('script');
         script.src = '../components//footer/footer.js';
         document.body.appendChild(script);

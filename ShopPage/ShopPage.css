@@ -6,11 +6,11 @@ body {
   font-family: "MyAkkurattLL-Regular", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #EFE6DB;
+  background-color: #efe6db;
 }
 
 .section1 {
-  color: #F7F1E8;
+  color: #f7f1e8;
   height: 100vh;
   overflow: hidden;
 }
@@ -25,7 +25,7 @@ body {
 .section1-image {
   position: relative;
   overflow: hidden;
-  background-image: url("/assets/images/hero-final.jpg");
+  background-image: url("../assets/images/hero-final.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,34 +39,37 @@ body {
 }
 
 .section1-image-linear {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(269.93deg, transparent 65.57%, rgba(79, 60, 46, 0.8) 95.52%);
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    269.93deg,
+    transparent 65.57%,
+    rgba(79, 60, 46, 0.8) 95.52%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .section1-image-linear2 {
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to right,
-      rgba(199, 146, 129, 0.2) 0%,
-      rgba(199, 146, 129, 0.2) 25%,
-      rgba(199, 146, 129, 0.1) 40%,
-      rgba(199, 146, 129, 0) 50%,
-      rgba(199, 146, 129, 0.1) 90%,
-      rgba(199, 146, 129, 0.2) 100%
-    );
-    /* filter: brightness(2); */
-    z-index: 1;
-    pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(199, 146, 129, 0.2) 0%,
+    rgba(199, 146, 129, 0.2) 25%,
+    rgba(199, 146, 129, 0.1) 40%,
+    rgba(199, 146, 129, 0) 50%,
+    rgba(199, 146, 129, 0.1) 90%,
+    rgba(199, 146, 129, 0.2) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .section1-content {
@@ -76,8 +79,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* justify-content: space-between; */
   align-items: flex-start;
   box-sizing: border-box;
   z-index: 2;
@@ -99,15 +100,15 @@ body {
 .brand {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   margin-bottom: 16px;
-  color: #F7F1E8;
+  color: #f7f1e8;
   font-weight: lighter;
   letter-spacing: -1px;
 }
 
 .icon-4 {
   font-size: 22px;
-  background: #F7F1E8;
-  color: #B39B83;
+  background: #f7f1e8;
+  color: #b39b83;
   padding: 3px 8px 1px 6px;
   border-radius: 50%;
   margin-left: 5px;
@@ -118,7 +119,7 @@ body {
   line-height: 1.2;
   margin: 0;
   font-weight: 400;
-  color: #F7F1E8;
+  color: #f7f1e8;
   letter-spacing: -4px;
 }
 
@@ -133,14 +134,14 @@ body {
   margin-bottom: 32px;
   max-width: 405px;
   line-height: 1.5;
-  color: #F7F1E8;
+  color: #f7f1e8;
   opacity: 0.9;
 }
 
 .choose-button {
   display: inline-block;
-  background-color: #3184FF;
-  color: #F7F1E8;
+  background-color: #3184ff;
+  color: #f7f1e8;
   padding: 16px 24px;
   border-radius: 24px;
   font-size: 16px;
@@ -175,8 +176,8 @@ body {
 .section2-text1 {
   font-size: clamp(2.5rem, 6vw, 80px);
   max-width: 700px;
-  font-family: 'MyAkkurattLL-Light', sans-serif;
-  background: linear-gradient(to right, #2E2D26, #AF761C);
+  font-family: "MyAkkurattLL-Light", sans-serif;
+  background: linear-gradient(to right, #2e2d26, #af761c);
   background-clip: text;
   color: transparent;
   margin-bottom: 24px;
@@ -185,14 +186,14 @@ body {
 
 .madeforyou {
   padding: 0px 2px 0px 0px;
-  font-family: 'PPEditorialNew-UltraLightItalic', sans-serif;
+  font-family: "PPEditorialNew-UltraLightItalic", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
 .section2-text2 {
   font-size: clamp(1rem, 2vw, 1rem);
-  color: #4A4741;
+  color: #4a4741;
   max-width: 570px;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -201,10 +202,10 @@ body {
 .section2-text3 {
   display: inline-block;
   padding: 12px 24px;
-  border: 1px solid #4A4741;
+  border: 1px solid #4a4741;
   border-radius: 24px;
   background-color: transparent;
-  color: #4A4741;
+  color: #4a4741;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -216,7 +217,7 @@ html {
 
 .section3 {
   padding: 48px 0;
-  color: #4A4741;
+  color: #4a4741;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,14 +240,13 @@ html {
   flex: 0 0 40%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   letter-spacing: -1px;
 }
 
 .section3-text1 {
   width: 85%;
-  font-family: 'MyAkkurattLL-Light', sans-serif;
+  font-family: "MyAkkurattLL-Light", sans-serif;
   font-size: clamp(2rem, 5vw, 56px);
   margin-bottom: 24px;
   line-height: 1.2;
@@ -270,15 +270,16 @@ html {
 .section3-image img {
   width: 100%;
   height: auto;
-  /* max-width: 60vh; */
   border-radius: 24px;
   object-fit: cover;
 }
 
 .section4 {
-  margin: 48px 48px;
+  max-width: 1352px;
+  justify-content: center;
+  margin: 48px auto;
   padding: 80px 40px;
-  background-color: #EFE6DB;
+  background-color: #efe6db;
   border-radius: 25px;
   box-shadow: 0 25px 50px rgba(74, 71, 65, 0.15);
   position: relative;
@@ -286,37 +287,37 @@ html {
 }
 
 .section4-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 10;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 .section4-text {
-    font-weight: 300;
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    color: #4A4741;
-    margin-bottom: 40px;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
-    position: relative;
+  font-weight: 300;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: #4a4741;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  position: relative;
 }
 
 .section4-text::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 4px;
-    background: #b38b6d;
-    margin: 25px auto 0;
-    border-radius: 2px;
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #b38b6d;
+  margin: 25px auto 0;
+  border-radius: 2px;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: #4A4741;
-  color: #F7F1E8;
+  background-color: #4a4741;
+  color: #f7f1e8;
   padding: 18px 42px;
   border-radius: 35px;
   font-size: 18px;
@@ -411,7 +412,7 @@ html {
   display: flex;
   justify-content: center;
   gap: 18px;
-  border: 2px solid #BEB0A0;
+  border: 2px solid #beb0a0;
   border-radius: 40px;
   padding: 18px 25px;
   width: fit-content;
@@ -464,9 +465,9 @@ html {
 }
 
 .tech-specs {
-  background: #5A5958;
+  background: #5a5958;
   padding: 80px 40px;
-  color: #F7F1E8;
+  color: #f7f1e8;
   position: relative;
   overflow: hidden;
 }
@@ -477,7 +478,11 @@ html {
   content: "";
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
   pointer-events: none;
 }
 .tech-specs::before {
@@ -513,6 +518,7 @@ html {
 }
 
 .spec-item {
+  padding-left: 60px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -534,23 +540,22 @@ html {
 }
 
 .spec-item li {
+  margin: 8px 0px 8px 16px;
   font-size: 14px;
   line-height: 1.4;
 }
 
-
 /* Tablet Responsive */
 @media (max-width: 1024px) {
-
   .section1-image-wrapper {
     padding: 0px;
   }
-  
+
   .section1-image {
-    background-image: url("/assets/images/hero-final_1.jpg");
+    background-image: url("../assets/images/hero-final_1.jpg");
     border-radius: 0px;
   }
-  
+
   .section1-content {
     padding: 60px 24px 48px 24px;
     align-items: center;
@@ -577,7 +582,6 @@ html {
 
   .section3 {
     height: auto;
-    /* min-height: 80vh; */
     padding: 32px 0px 48px 0px;
     gap: 48px;
   }
@@ -585,7 +589,6 @@ html {
   .section3-content {
     flex-direction: column;
     gap: 20px;
-    /* padding: 0 48px; */
     height: auto;
   }
 
@@ -599,7 +602,6 @@ html {
   }
 
   .section3-media {
-
     order: 1;
     width: 100%;
     height: auto;
@@ -618,12 +620,11 @@ html {
   .section4 {
     padding: 50px 20px;
   }
-  
+
   .image-container {
     height: 350px;
-    /* border-radius: 50px; */
   }
-  
+
   .image-container img {
     border-radius: 15px;
   }
@@ -631,31 +632,30 @@ html {
   .color-selector {
     flex-wrap: wrap;
     max-width: 400px;
-    /* border-radius: 30px; */
     padding: 15px;
   }
-  
+
   .color-dot {
     width: 36px;
     height: 36px;
   }
 
-  
-
+  .spec-item {
+    padding-left: 0px;
+  }
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-
   .section1-image-wrapper {
     padding: 0px;
   }
-  
+
   .section1-image {
-    background-image: url("/assets/images/hero-final_1.jpg");
+    background-image: url("../assets/images/hero-final_1.jpg");
     border-radius: 0px;
   }
-  
+
   .section1-content {
     padding: 60px 24px 48px 24px;
     align-items: center;
@@ -668,11 +668,11 @@ html {
     font-size: 36px;
     text-align: center;
   }
-  
+
   .brand {
     text-align: center;
   }
-  
+
   .description {
     text-align: center;
     font-size: 16px;
@@ -684,6 +684,32 @@ html {
 
   .section2-text2 {
     padding: 0px 24px 0px 24px;
-  }  
-}
+  }
 
+  .image-container {
+    margin-bottom: 40px;
+  }
+
+  .ring-image {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .color-selector {
+    gap: 1px;
+    border-radius: 32px;
+    padding: 12px 6px;
+  }
+
+  .tech-specs {
+    padding: 80px 24px;
+  }
+
+  .specs-grid {
+    gap: 40px 40px;
+  }
+
+  .spec-item li {
+    font-size: 10px;
+  }
+}

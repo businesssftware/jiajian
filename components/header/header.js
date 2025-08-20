@@ -1,31 +1,31 @@
 // Menu elements
-const menuToggle = document.getElementById('menu-toggle');
-const menuWrapper = document.getElementById('menu-wrapper');
-const menuClose = document.getElementById('menu-close');
-const overlay = document.getElementById('overlay');
+const menuToggle = document.getElementById("menu-toggle");
+const menuWrapper = document.getElementById("menu-wrapper");
+const menuClose = document.getElementById("menu-close");
+const overlay = document.getElementById("overlay");
 
 // Open menu
 function openMenu() {
-  menuWrapper.classList.add('active');
-  overlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  menuWrapper.classList.add("active");
+  overlay.classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
 // Close menu
 function closeMenu() {
-  menuWrapper.classList.remove('active');
-  overlay.classList.remove('active');
-  document.body.style.overflow = 'auto';
+  menuWrapper.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.style.overflow = "auto";
 }
 
 // Menu toggle events
-menuToggle.addEventListener('click', openMenu);
-menuClose.addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu);
+menuToggle.addEventListener("click", openMenu);
+menuClose.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
 
 // Close menu on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && menuWrapper.classList.contains('active')) {
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && menuWrapper.classList.contains("active")) {
     closeMenu();
   }
 });
@@ -74,7 +74,6 @@ window.addEventListener("scroll", () => {
       navbar.classList.remove("light");
     }
   }
-
 });
 
 window.dispatchEvent(new Event("scroll"));

@@ -24,7 +24,7 @@
   display: flex;
   padding: 8px 48px;
   background-color: transparent;
-  --webkit-backdrop-filter: none;
+  backdrop-filter: none;
   transition: background-color 0.5s ease;
   border-radius: 8px;
   margin: 16px 0;
@@ -33,16 +33,16 @@
   max-width: 1400px;
   align-items: center;
   gap: 48px;
-  font-family: 'MyAkkurattLL-Regular', sans-serif;
-  color: #4A4741;
+  font-family: "MyAkkurattLL-Regular", sans-serif;
+  color: #4a4741;
 }
 
 .navbar.light {
-  color: #F7F1E8;
+  color: #f7f1e8;
 }
 
 .navbar.light a {
-  color: #F7F1E8;
+  color: #f7f1e8;
 }
 
 .navbar.scrolled {
@@ -54,7 +54,7 @@
   transform: scaleY(0.8);
   display: inline-block;
   align-items: center;
-  font-family: 'MyAkkurattLL-light', sans-serif;
+  font-family: "MyAkkurattLL-light", sans-serif;
   font-size: 32px;
   font-weight: 100;
   margin-bottom: -6px;
@@ -98,8 +98,8 @@
 }
 
 .shop-button {
-  background-color: #3184FF;
-  color: #F7F1E8;
+  background-color: #3184ff;
+  color: #f7f1e8;
   border: none;
   padding: 16px 24px;
   border-radius: 24px;
@@ -140,7 +140,7 @@
 }
 
 .menu-icon:hover {
-  background-color: #3635311A;
+  background-color: #3635311a;
   transform: translateY(-2px);
 }
 
@@ -174,7 +174,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #F7F1E8;
+  background-color: #f7f1e8;
   border-radius: 0px 0px 8px 8px;
   z-index: 999;
   transform: translateY(-100%);
@@ -194,10 +194,9 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  font-family: 'MyAkkurattLL-Regular';
+  font-family: "MyAkkurattLL-Regular";
 }
 
-/* Header section with logo and close button */
 .menu-header {
   display: flex;
   justify-content: space-between;
@@ -208,7 +207,7 @@
 .close-btn {
   width: 48px;
   height: 48px;
-  border: 1px solid #4A4741;
+  border: 1px solid #4a4741;
   border-radius: 50%;
   background: transparent;
   font-size: 20px;
@@ -216,7 +215,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4A4741;
+  color: #4a4741;
   font-family: inherit;
 }
 
@@ -230,7 +229,7 @@
 .menu-column h4 {
   font-size: 18px;
   font-weight: bold;
-  color: #4A4741;
+  color: #4a4741;
   margin-bottom: 12px;
   padding-bottom: 8px;
   border-bottom: 1px solid #ddd;
@@ -245,7 +244,7 @@
 .menu-column ul li {
   margin-bottom: 12px;
   font-size: 16px;
-  color: #4A4741;
+  color: #4a4741;
   cursor: pointer;
   transition: font-weight 0.2s ease;
 }
@@ -269,7 +268,7 @@
   font-size: 12px;
   font-style: italic;
   margin-left: 8px;
-  font-family: 'PPEditorialNew-UltraLightItalic', sans-serif;
+  font-family: "PPEditorialNew-UltraLightItalic", sans-serif;
   font-weight: bold;
 }
 
@@ -286,7 +285,6 @@
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 10px;
-  /* background: #f0f0f0; */
 }
 
 .menu-image-button {

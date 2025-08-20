@@ -1,18 +1,18 @@
-// State management
+// Variables
 let selectedColor = "silver";
 let selectedPrice = 349;
 let selectedSize = null;
 let currentStep = "finish";
-let currentImageIndex = 1; // Track current image index
+let currentImageIndex = 1;    // Track current image index
 
 // Fixed images for image viewer (doesn't change with color selection)
 const fixedImages = [
-  "/assets/images/Silver.png",
-  "/assets/images/Black.png",
-  "/assets/images/Brushed.png",
-  "/assets/images/Stealth.png",
-  "/assets/images/Gold.png",
-  "/assets/images/Rose.png",
+  "../assets/images/Silver.png",
+  "../assets/images/Black.png",
+  "../assets/images/Brushed.png",
+  "../assets/images/Stealth.png",
+  "../assets/images/Gold.png",
+  "../assets/images/Rose.png",
 ];
 
 // Initialize
@@ -96,11 +96,6 @@ function updateSizeSelection() {
       option.classList.add("selected");
     }
   });
-}
-
-function updateImages() {
-  // Images are now fixed, no need to update thumbnails based on color
-  // Thumbnails always show the same 6 images
 }
 
 function updateBackgroundImage() {
@@ -205,7 +200,6 @@ function addToCart() {
 
   updateCartDisplay();
 
-  // Show confirmation (you can customize this)
   alert("Added to cart!");
 }
 
@@ -213,9 +207,4 @@ function updateCartDisplay() {
   const cartCount = parseInt(localStorage.getItem("cartCount") || "0");
   const cartCountElement = document.getElementById("cart-count");
   cartCountElement.textContent = cartCount;
-}
-
-function openCart() {
-  // Implement cart opening logic
-  console.log("Opening cart...");
 }
