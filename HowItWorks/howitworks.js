@@ -237,17 +237,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Accept all cookies
     acceptAllBtn.addEventListener('click', function () {
-        setCookieSeconds('cookie_consent', 'all', 5); // 5min expiry
-        setCookie('analytics_cookies', 'true', 365);
-        setCookie('marketing_cookies', 'true', 365);
+        setCookie('cookie_consent', 'all', 5); // 5min expiry
+        setCookie('analytics_cookies', 'true', 5);
+        setCookie('marketing_cookies', 'true', 5);
         closePopup();
     });
 
     // Accept only necessary cookies
     necessaryBtn.addEventListener('click', function () {
-        setCookie('cookie_consent', 'necessary', 365);
-        setCookie('analytics_cookies', 'false', 365);
-        setCookie('marketing_cookies', 'false', 365);
+        setCookie('cookie_consent', 'necessary', 5);
+        setCookie('analytics_cookies', 'false', 5);
+        setCookie('marketing_cookies', 'false', 5);
         closePopup();
     });
 
@@ -257,9 +257,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Cookie helper functions
-    function setCookie(name, value, days) {
+    function setCookie(name, value, minutes) {
         const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        date.setTime(date.getTime() + (minutes * 1000 * 60));
         const expires = "expires=" + date.toUTCString();
         document.cookie = `${name}=${value}; ${expires}; path=/; SameSite=Lax`;
     }
@@ -281,12 +281,5 @@ document.addEventListener('DOMContentLoaded', function () {
         return "";
     }
 
-
-    function setCookieSeconds(name, value, minutes) {
-        const date = new Date();
-        date.setTime(date.getTime() + (minutes * 1000 *60));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = `${name}=${value}; ${expires}; path=/; SameSite=Lax`;
-    }
 });
 

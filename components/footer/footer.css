@@ -1,13 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+
 /* Footer Styles */
 .footer {
     background: linear-gradient(to top, #2a2a2a, #393838);
-
     color: #ccc;
     padding: 60px 40px 20px;
 }
-
-
-
 
 .payment-section {
     text-align: center;
@@ -28,6 +36,7 @@
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .payment-icons img {
@@ -37,18 +46,19 @@
     border-radius: 6px;
     background: white;
     padding: 2px;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .payment-icons img:hover {
-    transform: scale(3.15);
-
+    transform: scale(1.15) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
+    gap: 40px;
     margin-bottom: 50px;
     max-width: 1200px;
     margin-left: auto;
@@ -63,9 +73,9 @@
 }
 
 .footer-section h5 {
-    color: #999;
+    color: #4A90E2;
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 15px;
     margin-top: 30px;
 }
@@ -89,13 +99,15 @@
     color: white;
 }
 
+/* Newsletter Section - Key Mobile Fixes */
 .newsletter-form {
     display: flex;
     margin-bottom: 20px;
     background: #333;
-    border-radius: 50px;
-    overflow: visible;
+    border-radius: 25px;
+    overflow: hidden;
     border: 1px solid #444;
+    min-height: 50px;
 }
 
 .newsletter-form input {
@@ -105,11 +117,50 @@
     border: none;
     color: white;
     font-size: 0.95rem;
+    min-width: 0;
+    /* Important for mobile flex shrinking */
 }
 
 .newsletter-form input::placeholder {
     color: #999;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+}
+
+.newsletter-form input:hover {
+    background: #404040;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input:hover::placeholder {
+    color: #4A90E2;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    background: #404040;
+}
+
+.newsletter-form button {
+    background: #4A90E2;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 4px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    /* Prevent button from shrinking */
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form button:hover {
+    background: #357ABD;
+    transform: scale(1.05);
 }
 
 .newsletter-form input:hover {
@@ -129,34 +180,18 @@
     outline: none;
 }
 
-.newsletter-form button {
-    background: #4A90E2;
-    border: none;
-    color: white;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-size: auto;
-    border-radius: 50px;
-    box-sizing: content-box;
 
-    transition: background 0.3s ease;
-}
 
 .arrow {
-    transform: scale(0.8);
-    display: inline-block;
-}
-
-
-
-.newsletter-form button:hover {
-    background: #357ABD;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .privacy-note {
     font-size: 0.85rem;
     color: #999;
     line-height: 1.4;
+    margin-top: 15px;
 }
 
 .privacy-note a {
@@ -168,66 +203,61 @@
     text-decoration: underline;
 }
 
+/* Social Icons - Mobile Fixes */
+.social-icons {
+    margin-top: 30px;
+}
+
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .social-links a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     background: #333;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    transition: all 0.3s ease;
-
     text-decoration: none;
-    transition: transform 0.3s ease;
-
+    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .social-links a i {
     color: white;
-}
-
-.social-links a i:hover {
-    color: deeppink;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
     background: #4A90E2;
-    color: burlywood;
-    transform: translateY(-2px) scale(1.2);
-    box-shadow: 0 4px 8px rgba(205, 7, 142, 0.94);
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
 }
-.social-links .pin {
+
+.social-links a:hover i {
+    color: white;
+}
+
+/* Emoji icons for social media */
+.social-links a[aria-label="YouTube"],
+.social-links a[aria-label="TikTok"] {
     font-size: 20px;
+}
+
+.social-links .pin {
+    font-size: 18px;
     color: #fff;
-    background-color: #373636;
-    border-radius: 50%;
-    padding: 10px;
-    display: inline-block;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.social-links .pin:hover {
-    text-decoration: underline wavy 0.4px;
-    background-color: burlywood !important;
-    color: burlywood;
-    padding: 2px 4px;
-    border-radius: 4px;
-    transform: scale(1.1);
+.social-links a:hover .pin {
+    color: white;
 }
-
-/*css not follow strcut and who come first ?*/
-
-
 
 .footer-bottom {
     border-top: 1px solid #444;
@@ -241,7 +271,7 @@
 
 .legal-links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -250,150 +280,32 @@
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .legal-links a:hover {
     color: white;
 }
 
-.copyright {
-    text-align: right;
-    color: #666;
-    font-size: 0.85rem;
-    line-height: 1.4;
-}
-
-.copyright p {
-    margin-bottom: 5px;
-}
-
-
-.payment-icons img {
-
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    color: #333;
-
-    /* Combine initial states */
-    box-shadow: 0 5px 6.5px rgba(123, 161, 65, 0.929);
-    transform: scale(1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    /* For the gradient effect */
-}
-
-/* Hover effects */
-.payment-icons img:hover {
-    transform: scale(1.7) translateY(-5px) rotate(5deg);
-    box-shadow:
-        0 10px 20px rgba(0, 0, 0, 0.2),
-        0 6px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Blinking effect using a pseudo-element */
-.payment-icons img ::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg,
-            rgba(255, 255, 255, 0.2) 0%,
-            rgba(255, 255, 255, 0) 50%,
-            rgba(255, 255, 255, 0.2) 100%);
-    background-size: 200% 200%;
-    background-position: -100% 0;
-    transition: background-position 0.5s ease;
-}
-
-.my-card:hover::before {
-    background-position: 100% 0;
-}
-
-
-/* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 20px 20px;
-    }
-
-    .ring {
-        width: 300px;
-        height: 300px;
-        margin-top: 40px;
-    }
-
-    .ring-inner {
-        width: 150px;
-        height: 150px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .features {
-        padding: 60px 20px;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .business-image {
-        padding: 0 30px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .business-image h2 {
-        font-size: 2.5rem;
-    }
-
     .footer {
         padding: 40px 20px 20px;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .payment-section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
     }
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .legal-links {
-        justify-content: center;
-    }
-
-    .copyright {
-        text-align: center;
+    .payment-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
     }
 
     .payment-icons {
-        gap: 10px;
+        gap: 12px;
+        justify-content: center;
     }
 
     .payment-icons img {
@@ -401,59 +313,158 @@
         height: 28px;
     }
 
-    .testimonial-content {
+    .footer-content {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 35px;
+        margin-bottom: 40px;
+    }
+
+    .footer-section {
+        text-align: left;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    /* Newsletter Mobile Fixes */
+    .newsletter-form {
+        border-radius: 25px;
+        min-height: 48px;
+    }
+
+    .newsletter-form input {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .newsletter-form input::placeholder {
+        font-size: 0.85rem;
+    }
+
+    .newsletter-form button {
+        padding: 10px 16px;
+        min-width: 48px;
+    }
+
+    .arrow {
+        font-size: 14px;
+    }
+
+    /* Social Links Mobile */
+    .social-links {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .social-links a[aria-label="YouTube"],
+    .social-links a[aria-label="TikTok"] {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
-    .person-silhouette {
-        width: 300px;
-        height: 400px;
-        margin: 0 auto;
+    .legal-links {
+        justify-content: center;
+        gap: 15px;
     }
 
-    .app-interfaces {
-        position: static;
-        transform: none;
-        margin-top: 30px;
-        align-items: center;
+    .legal-links a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px 15px;
     }
 
-    .app-card {
-        width: 260px;
+    .payment-section h3 {
+        font-size: 1.2rem;
     }
 
-    .testimonial-text {
-        padding-left: 0;
+    .payment-icons {
+        gap: 8px;
     }
 
-    .testimonial-text blockquote {
-        font-size: 2rem;
+    .payment-icons img {
+        width: 40px;
+        height: 25px;
     }
 
-    .news-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .footer-content {
+        gap: 30px;
     }
 
-    .featured-article {
-        height: 400px;
+    /* Newsletter Very Small Mobile */
+    .newsletter-form {
+        flex-direction: column;
+        border-radius: 15px;
+        min-height: auto;
     }
 
-    .article-overlay h3 {
-        font-size: 1.5rem;
+    .newsletter-form input {
+        padding: 14px 16px;
+        border-radius: 15px 15px 0 0;
+        border-bottom: 1px solid #444;
     }
 
-    .news-item h4 {
-        font-size: 1.1rem;
+    .newsletter-form button {
+        border-radius: 0 0 15px 15px;
+        margin: 0;
+        padding: 14px 16px;
+        min-width: auto;
     }
 
-    .testimonial-section {
-        padding: 60px 20px;
+    .social-links {
+        justify-content: center;
+        gap: 8px;
     }
 
-    .news-section {
-        padding: 60px 20px;
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer {
+        padding: 20px 10px 10px;
+    }
+
+    .payment-icons {
+        gap: 6px;
+    }
+
+    .payment-icons img {
+        width: 36px;
+        height: 22px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        padding: 12px 14px;
+        font-size: 0.85rem;
     }
 }

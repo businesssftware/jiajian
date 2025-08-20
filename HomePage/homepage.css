@@ -16,100 +16,6 @@ html {
 
 }
 
-/* Navigation */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    --webkit-backdrop-filter: blur(20px);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    color: #333;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 400;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-links a:hover {
-    color: #333;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #4A90E2;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.shop-btn {
-    background: #4A90E2;
-    color: white !important;
-    padding: 12px 30px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
-}
-
-.shop-btn:hover {
-    background: #357ABD;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
-}
-
-.shop-btn::after {
-    display: none;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-
-
-
-
-
 
 
 
@@ -133,6 +39,7 @@ html {
     background-image: url("/assets/img/home3.png");
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 8%;
 }
 
 .hero-content {
@@ -201,43 +108,6 @@ html {
 
 
 
-.ring:hover {
-    transform: scale(1.05);
-}
-
-
-
-
-.sensor {
-    position: absolute;
-    background: linear-gradient(45deg, #ff4444, #ff8800);
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba(255, 68, 68, 0.6);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.sensor1 {
-    width: 20px;
-    height: 8px;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.sensor2 {
-    width: 12px;
-    height: 12px;
-    top: 60px;
-    right: 40px;
-    border-radius: 50%;
-}
-
-.sensor3 {
-    width: 8px;
-    height: 15px;
-    bottom: 45px;
-    left: 35px;
-}
 
 /* Background Elements */
 .bg-elements {
@@ -341,11 +211,7 @@ html {
     margin: 0 auto;
 }
 
-.homepage1 {
-    position: static;
 
-
-}
 
 /* Animations */
 @keyframes float {
@@ -824,4 +690,233 @@ html {
     background: #357ABD;
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(74, 144, 226, 0.6);
+}
+
+/*  (phones in portrait) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 70px 15px 0;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .features {
+        padding: 60px 15px;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .business-content {
+        height: 350px;
+    }
+
+    .business-image {
+        padding: 0 20px;
+    }
+
+    .testimonial-section {
+        padding: 60px 15px;
+    }
+
+    .app-interfaces {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .app-card {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .news-section {
+        padding: 60px 15px;
+    }
+
+    .featured-article {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide nav links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--background-light, rgba(255, 255, 255, 0.95));
+        padding: 20px;
+        gap: 20px;
+        box-shadow: var(--shadow-sm, 0 4px 15px rgba(0, 0, 0, 0.1));
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show when menu-toggle is clicked */
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        color: var(--text-dark, #333);
+    }
+
+    .shop-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Show hamburger menu */
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 20px 20px;
+        min-height: 80vh;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 0.9rem;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 80px 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .features p {
+        font-size: 1rem;
+    }
+
+    /* Testimonial Section */
+    .testimonial-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .app-showcase {
+        justify-content: center;
+    }
+
+    .person-silhouette {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+    }
+
+    .app-interfaces {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .app-card {
+        width: 100%;
+        max-width: 260px;
+        padding: 15px;
+    }
+
+    .testimonial-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .testimonial-text blockquote {
+        font-size: 1.8rem;
+    }
+
+    /* News Section */
+    .news-section {
+        padding: 80px 20px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .featured-article {
+        height: 400px;
+    }
+
+    .article-overlay h3 {
+        font-size: 1.5rem;
+    }
+
+    .news-item h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Business CTA */
+    .business-content {
+        height: 400px;
+    }
+
+    .business-image {
+        padding: 0 30px;
+    }
+
+    .business-image h2 {
+        font-size: 2.5rem;
+    }
+
+    .business-btn {
+        padding: 14px 30px;
+        font-size: 0.9rem;
+    }
 }

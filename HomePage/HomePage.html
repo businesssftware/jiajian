@@ -1,19 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oura Ring. Smart Ring for Fitness, Stress, Sleep & Health.</title>
-    <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png">
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="../components/header/header.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oura Ring. Smart Ring for Fitness, Stress, Sleep & Health.</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/icon-32x32.png"/>
+  <link rel="stylesheet" href="../components/header/header.css"/>
+  <link rel="stylesheet" href="../components/footer/footer.css"/>
+  <link rel="stylesheet" href="../shared/fonts.css"/>
+  <link rel="stylesheet" href="homepage.css"/>
+  <script src="homepage.js"></script>
 </head>
 
-
 <body>
-   <header id="header" class="site-header" class="section1 light-navbar-section"></header>
-
-
+    <header id="header" class="site-header"></header>
+  
+  
     <!-- Hero Section / after header -->
     <section class="hero" class="section1 light-navbar-section">
         <div class="overlay"></div>
@@ -204,49 +207,46 @@
         </div>
     </section>
 
-    <footer id="footer">
-        <!-- Footer will be dynamically loaded here -->
 
 
-    </footer>
-    <script src="homepage.js"></script>
-   
-    <script>//load first , but not prior than <head>
-        fetch('../components/header/header.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
+  <footer id="footer" class="light-navbar-section"></footer>
+  <script>//load first , but not prior than <head>
+      fetch('../components/header/header.html')
+      .then(res => res.text())
+      .then(data => {
+          document.getElementById('header').innerHTML = data;
 
-            const script = document.createElement('script');
-            script.src = '../components/header/header.js';
-            document.body.appendChild(script);
-        });
-        //dynamic load footer to  page
-        fetch("../components/footer/footer.html")
-            .then((res) => res.text())
-            .then((data) => {
-            document.getElementById("footer").innerHTML = data; 
-            // footer then added footer.js
-            const script = document.createElement("script");
-            script.src = "../components/footer/footer.js";
-            document.body.appendChild(script);
-            });
+          const script = document.createElement('script');
+          script.src = '../components/header/header.js';
+          document.body.appendChild(script);
+      });
+      //dynamic load footer to  page
+      fetch("../components/footer/footer.html")
+          .then((res) => res.text())
+          .then((data) => {
+          document.getElementById("footer").innerHTML = data; 
+          // footer then added footer.js
+          const script = document.createElement("script");
+          script.src = "../components/footer/footer.js";
+          document.body.appendChild(script);
+          });
 
-        // add footer.css if not added in <link header>
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "../components/footer/footer.css";
-        document.head.appendChild(link);
+      // add footer.css if not added in <link header>
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "../components/footer/footer.css";
+      document.head.appendChild(link);
 
-        const link2 = document.createElement("link");
-        link2.rel = "stylesheet";
-        link2.href = "../shared/fonts.css";
-        document.head.appendChild(link2);
+      const link2 = document.createElement("link");
+      link2.rel = "stylesheet";
+      link2.href = "../shared/fonts.css";
+      document.head.appendChild(link2);
 
-    </script>
+  </script>
 
   </body>
 </html>
+
 
 
 

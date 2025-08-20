@@ -7,8 +7,9 @@
     <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png" />
     <link rel="stylesheet" href="../components/header/header.css" />
     <link rel="stylesheet" href="../shared/fonts.css" />
-    <link rel="stylesheet" href="/HowItWorks/howitworks.css" />
+    <link rel="stylesheet" href="howitworks.css" />
   </head>
+  
   <body>
     <header id="header" class="site-header"></header>
 
@@ -175,7 +176,7 @@
           document.body.appendChild(script);
         });
 
-      fetch("/components/footer/footer.html")
+      fetch("../components/footer/footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.querySelector("footer").innerHTML = data;
