@@ -6,11 +6,11 @@
 <title>Seamless Integrations with Oura Ring: Boost Your Experience</title>
   <link rel="icon" type="image/x-icon" href="/assets/images/icon-32x32.png">
   <link rel="stylesheet" href="../components/header/header.css">
-  <link rel="stylesheet" href="../shared/fonts.css">    <link rel="stylesheet" href="integration.css" />
+  <link rel="stylesheet" href="integration.css" />
+      <script src="integration.js"></script>
+
   </head>
   
-some redundant，
- ， combine ， azure
 
   <body>
   <header id="header" class="site-header"></header>
@@ -47,10 +47,10 @@ some redundant，
         <br>
         <div class="icons">
           <h4>Apple HealthKit</h4>
-          <img class="front" src="..\assets\img\image.png" alt="Apple HealthKit"   height="auto"/>
+          <img class="front" src="../assets/img/image.png" alt="Apple HealthKit"   height="auto"/>
           <h4>Google Health Connect</h4>
           <img class="back_with_space"
-            src="..\assets\img\gogolehealth-integration1.png"
+            src="../assets/img/gogolehealth-integration1.png"
             alt="Google Health Connect"
           />
         </div>
@@ -60,7 +60,7 @@ some redundant，
 
       <div class="apps"class="light-navbar-section">
         <div class="app-card">
-          <img src="..\assets\img\natural-cycles-card_3.png" alt="Headspace"  width="250px" height="300px" />
+          <img src="../assets/img/natural-cycles-card_3.png" alt="Headspace"  width="250px" height="300px" />
           <h3>Headspace</h3>
           <p>
             Headspace audio content is featured in the Oura App to help you
@@ -69,7 +69,7 @@ some redundant，
           <a href="#">Read More →</a>
         </div>
         <div class="app-card">
-          <img src="..\assets\img\strava-card_7.png" alt="Strava" />
+          <img src="../assets/img/strava-card_7.png" alt="Strava" />
           <h3>Strava</h3>
           <p>
             By integrating with Strava, you'll get credit for Strava activities
@@ -79,7 +79,7 @@ some redundant，
           <a href="#">Read More →</a>
         </div>
         <div class="app-card">
-          <img src="..\assets\img\headspace-card_5.png" alt="Natural Cycles" />
+          <img src="../assets/img/headspace-card_5.png" alt="Natural Cycles" />
           <h3>Natural Cycles</h3>
           <p>
             Natural Cycles, the first FDA-cleared birth control app, integrates
@@ -174,76 +174,38 @@ some redundant，
 
 
     <footer id="footer" class="light-navbar-section"></footer>
-    <script>
-      fetch('../components/header/header.html')
+    <script>//load first , but not prior than <head>
+        fetch('../components/header/header.html')
         .then(res => res.text())
         .then(data => {
-          document.getElementById('header').innerHTML = data;
+            document.getElementById('header').innerHTML = data;
 
-          const script = document.createElement('script');
-          script.src = '../components//header/header.js';
-          document.body.appendChild(script);
-        });
-    // <head> linking dynamic 
-    (function(){
-      const isSubfolder = location.pathname.split("/").length > 2;
-      const headerHtmlPath = isSubfolder ? "../components/header/header.html" : "/components/header/header.html";
-      const headerCssPath = isSubfolder ? "../components/header/header.css" : "/components/header/header.css";
-      const headerJsPath = isSubfolder ? "../components/header/header.js" : "/components/header/header.js";
-
-      fetch(headerHtmlPath)
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("header").innerHTML = data;
-
-          //  header.js
-          const script = document.createElement("script");
-          script.src = headerJsPath;
-          document.body.appendChild(script);
-
-          
-          const currentPath = window.location.pathname;
-          const shopButton = document.querySelector(".shop-button");
-          if (shopButton && currentPath.includes("ShopPage.html")) {
-            shopButton.textContent = "Choose Your Ring";
-            shopButton.href = isSubfolder ? "../ShopPage2/OuraRing4.html" : "ShopPage2/OuraRing4.html";
-          }
-        });
-
-      const headerLink = document.createElement("link");
-      headerLink.rel = "stylesheet";
-      headerLink.href = headerCssPath;
-      document.head.appendChild(headerLink);
-    })();
-    </script>
-
-
-    <script src="integration.js"></script>
-
-
-    <script>
-      // footer dynamic link all related code
-    (function(){
-        const isSubfolder = location.pathname.split("/").length > 2;
-        const footerHtmlPath = isSubfolder ? "../components/footer/footer.html" : "/components/footer/footer.html";
-        const footerCssPath = isSubfolder ? "../components/footer/footer.css" : "/components/footer/footer.css";
-        const footerJsPath = isSubfolder ? "../components/footer/footer.js" : "/components/footer/footer.js";
-
-        fetch(footerHtmlPath)
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("footer").innerHTML = data;
-
-            const script = document.createElement("script");
-            script.src = footerJsPath;
+            const script = document.createElement('script');
+            script.src = '../components/header/header.js';
             document.body.appendChild(script);
-          });
+        });
+        //dynamic load footer to  page
+        fetch("../components/footer/footer.html")
+            .then((res) => res.text())
+            .then((data) => {
+            document.getElementById("footer").innerHTML = data; 
+            // footer then added footer.js
+            const script = document.createElement("script");
+            script.src = "../components/footer/footer.js";
+            document.body.appendChild(script);
+            });
 
-        const footerLink = document.createElement("link");
-        footerLink.rel = "stylesheet";
-        footerLink.href = footerCssPath;
-        document.head.appendChild(footerLink);
-    })();
+        // add footer.css if not added in <link header>
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "../components/footer/footer.css";
+        document.head.appendChild(link);
+
+        const link2 = document.createElement("link");
+        link2.rel = "stylesheet";
+        link2.href = "../shared/fonts.css";
+        document.head.appendChild(link2);
+
     </script>
 
   </body>

@@ -11,21 +11,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Ring interaction
-const ring = document.getElementById('heroRing');
-let isAnimating = false;
-
-ring.addEventListener('click', () => {
-    if (!isAnimating) {
-        isAnimating = true;
-        ring.style.transform = 'scale(1.1) rotateY(180deg)';
-
-        setTimeout(() => {
-            ring.style.transform = 'scale(1) rotateY(0deg)';
-            isAnimating = false;
-        }, 600);
-    }
-});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

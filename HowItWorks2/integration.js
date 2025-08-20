@@ -29,7 +29,7 @@ function updateTime() {
         timeZone: "Asia/Singapore",
     };
     const timeString = now.toLocaleTimeString("en-US", options);
-    console.log(`Current time: ${timeString}`); // For debugging, can be replaced with a UI element if needed
+    console.log(`Current time: ${timeString}`); 
 }
 setInterval(updateTime, 1000);
 // Simple animation for fade-in effect

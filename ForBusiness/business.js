@@ -252,36 +252,12 @@ function updateSuggestions(suggestions) {
     });
 }
 
-// Example usage with sample weather data (replace with your actual data source)
-const sampleWeatherData = {
-    temperature: 25,
-    humidity: 60,
-    windSpeed: 5.5,
-    rainChance: 10,
-    weatherCondition: 'clear sky'
-};
 
 // Update suggestions when the page loads
 window.addEventListener('load', () => {
     const suggestions = generateSuggestions(sampleWeatherData);
     updateSuggestions(suggestions);
 });
-
-// Additional possible output functions (commented out for now):
-// - Integrate Oura API: Fetch real user data like readiness score, activity levels.
-//   Example: async function fetchOuraData(accessToken) { /* Fetch from https://api.ouraring.com/v2/usercollection/daily_readiness */ }
-//   Then, in generateSuggestions, personalize based on readiness (e.g., if low, suggest rest).
-// - User input: Allow users to input preferences (e.g., indoor/outdoor) via form and filter suggestions.
-//   Example: Add a form with checkboxes, add event listener to regenerate suggestions.
-// - Visual charts: Use Chart.js to show activity trends correlated with weather history.
-//   Example: function renderActivityChart(weatherHistory, ouraHistory) { /* Create line chart */ }
-// - Notifications: Push web notifications for weather changes affecting activities.
-//   Example: if ('Notification' in window) { Notification.requestPermission().then(() => new Notification('Weather Update')); }
-
-//should put in the top of js , bec some error above will not lead to api fetch : warning
-
-
-
 
 
 
@@ -297,7 +273,7 @@ bulkOrder.addEventListener('mouseenter', () => {
 bulkOrder.addEventListener('mouseleave', () => {
     optionsGrid.classList.remove('bulk-hover');
 });
-// the hover then backgroudn change
+// the hover background change
 
 
 
